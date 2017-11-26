@@ -9,7 +9,7 @@
 #'  from filename parameter. Make sure you provide a proper file path.
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
-#' @export
+#' @export 
 #' @examples 
 #' # set your wd to a directory with FARS data files
 #' setwd("data")
