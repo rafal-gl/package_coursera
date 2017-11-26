@@ -1,0 +1,12 @@
+Package: fars.pack
+Title: Title
+Version: 0.1.0.0
+Authors@R: c(person(given = "Rafal", family = "Glabski", email = "rafalglabski@gmail.com", role = c("aut", "cre")))
+Description: Description
+Depends: R (>= 3.3.2)
+License: Internal use only
+Encoding: UTF-8
+LazyData: true
+Author: Rafal Glabski
+Maintainer: Rafal Glabski <rafalglabski@gmail.pl>
+Imports: broom, C50, DBI, dplyr, geosphere, ggmap, ggplot2, methods, partykit, purrr, reshape2, rgeos, rJava, RJDBC, rjson, ROCR, RODBC, sp, stringr, tcltk, xtable
