@@ -1,12 +1,13 @@
 Package: fars.pack
-Title: Title
+Title: FARS data manipulation
 Version: 0.1.0.0
 Authors@R: c(person(given = "Rafal", family = "Glabski", email = "rafalglabski@gmail.com", role = c("aut", "cre")))
-Description: Description
+Description: Package to process FARS data and to pass a course on coursera
 Depends: R (>= 3.3.2)
-License: Internal use only
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Author: Rafal Glabski
 Maintainer: Rafal Glabski <rafalglabski@gmail.pl>
-Imports: broom, C50, DBI, dplyr, geosphere, ggmap, ggplot2, methods, partykit, purrr, reshape2, rgeos, rJava, RJDBC, rjson, ROCR, RODBC, sp, stringr, tcltk, xtable
+Imports: dplyr, graphics, maps, readr, tidyr
+RoxygenNote: 6.0.1

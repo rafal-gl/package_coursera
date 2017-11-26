@@ -48,18 +48,14 @@ new_ver <- "0.1.0.0"
 
 
 create(path = package_name,
-       description = list(Title = "Title",
+       description = list(Title = "FARS data manipulation",
                           Version = new_ver,
-                          Description = "Description",
-                          License = "Internal use only",
+                          Description = "Package to process FARS data and to pass a course on coursera",
+                          License = "GPL-3",
                           "Authors@R" = "c(person(given = \"Rafal\", family = \"Glabski\", email = \"rafalglabski@gmail.com\", role = c(\"aut\", \"cre\")))", 
                           Author = "Rafal Glabski",
                           Maintainer = "Rafal Glabski <rafalglabski@gmail.pl>",
-                          # Hadley mówi, żeby wypisywać tylko Imports, a zamiast Depends
-                          # używać tylko package::function albo requireNamespace,
-                          # ale tak jest wygodniej :P
-                          #Depends = "broom, C50, DBI, dplyr, geosphere, ggmap, ggplot2, methods, partykit, purrr, reshape2, rgeos, rJava, RJDBC, rjson, ROCR, RODBC, sp, stringr, tcltk, xtable",
-                          Imports = "broom, C50, DBI, dplyr, geosphere, ggmap, ggplot2, methods, partykit, purrr, reshape2, rgeos, rJava, RJDBC, rjson, ROCR, RODBC, sp, stringr, tcltk, xtable",
+                          Imports = "dplyr, graphics, maps, readr, tidyr",
                           Encoding = "UTF-8"))
 
 file.copy("fars_functions.R",
@@ -69,11 +65,11 @@ file.copy("fars_functions.R",
 setwd(paste0("./", package_name))
 document()
 setwd("..")
-install(package_name)
-library(...)
-# check(package_name)
-
-build(pkg = package_name, path = old_versions_dir)
+# install(package_name)
+# library(...)
+# # check(package_name)
+# 
+# build(pkg = package_name, path = old_versions_dir)
 
 setwd(old_wd)
 
