@@ -9,7 +9,7 @@ Encoding: UTF-8
 LazyData: true
 Author: Rafal Glabski
 Maintainer: Rafal Glabski <rafalglabski@gmail.pl>
-Imports: dplyr, graphics, maps, readr, tidyr
+Imports: dplyr, graphics, maps, magrittr, readr, tidyr
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown

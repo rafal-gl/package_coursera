@@ -2,12 +2,11 @@
 # Skrypt do budowy kolejnych wersji pakietu
 # Autor: Rafał Głąbski
 #####################################################################
-
+# .libPaths("C:/Users/Rafał/Documents/R/win-library/3.3")
 library(devtools)
 library(roxygen2)
 library(stringr)
 library(dplyr)
-library(root)
 
 package_name <- "fars.pack"
 
@@ -21,7 +20,7 @@ package_dir <- "C:/Users/Public/szkolenieR/package_coursera"
 
 setwd(package_dir)
 options(devtools.desc.author="'First Last <first.last@example.com> [aut, cre]'")
-unlink(package_name, recursive = TRUE)
+# unlink(package_name, recursive = TRUE)
 
 ### Numer następnej wersji ###
 # Za change_ind wybierz liczbę od 1 do 4, im mniejsza tym ważniejsza zmiana 
@@ -56,7 +55,7 @@ create(path = package_name,
                           "Authors@R" = "c(person(given = \"Rafal\", family = \"Glabski\", email = \"rafalglabski@gmail.com\", role = c(\"aut\", \"cre\")))", 
                           Author = "Rafal Glabski",
                           Maintainer = "Rafal Glabski <rafalglabski@gmail.pl>",
-                          Imports = "dplyr, graphics, maps, readr, tidyr",
+                          Imports = "dplyr, graphics, magrittr, maps, readr, tidyr",
                           Encoding = "UTF-8"))
 
 file.copy("fars_functions.R",
@@ -66,13 +65,13 @@ file.copy("fars_functions.R",
 setwd(paste0("./", package_name))
 document()
 
-use_vignette("plot_accidents")
+# use_vignette("plot_accidents")
 # use_data()
 
 setwd("..")
 # install(package_name)
-# library(...)
-# # check(package_name)
+library(fars.pack)
+check(package_name)
 # 
 # build(pkg = package_name, path = old_versions_dir)
 
