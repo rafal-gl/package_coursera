@@ -1,7 +1,7 @@
 #' Load a FARS data file
 #' 
 #' This function loads a selected csv data file and returns a tibble
-#' with coresponding variables. It is a wrapper for \code{\link{[readr]read_csv}}.
+#' with coresponding variables. It is a wrapper for \code{read_csv}.
 #' 
 #' @param filename a character with a name of a file to be loaded
 #' @return a tibble with the same structure as the input file
@@ -12,10 +12,11 @@
 #' @export 
 #' @examples 
 #' # set your wd to a directory with FARS data files
-#' setwd("data")
-#' fl <- "accident_2013.csv.bz2"
-#' fars2013 <- fars_read(fl)
-#' str(fars2013)
+#' file_path <- system.file("extdata", package = "fars.pack")
+#' setwd(file_path)
+#' fl <- dir()[1]
+#' fars2015 <- fars_read(fl)
+#' str(fars2015)
 
 fars_read <- function(filename) {
   if(!file.exists(filename))
