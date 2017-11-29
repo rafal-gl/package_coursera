@@ -11,3 +11,6 @@ Author: Rafal Glabski
 Maintainer: Rafal Glabski <rafalglabski@gmail.pl>
 Imports: dplyr, graphics, maps, readr, tidyr
 RoxygenNote: 6.0.1
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr

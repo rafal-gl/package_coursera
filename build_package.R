@@ -7,6 +7,7 @@ library(devtools)
 library(roxygen2)
 library(stringr)
 library(dplyr)
+library(root)
 
 package_name <- "fars.pack"
 
@@ -64,6 +65,10 @@ file.copy("fars_functions.R",
           to = paste0(package_name, "/R"))
 setwd(paste0("./", package_name))
 document()
+
+use_vignette("plot_accidents")
+# use_data()
+
 setwd("..")
 # install(package_name)
 # library(...)
