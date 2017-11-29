@@ -2,14 +2,14 @@ Package: fars.pack
 Title: FARS data manipulation
 Version: 0.1.0.0
 Authors@R: c(person(given = "Rafal", family = "Glabski", email = "rafalglabski@gmail.com", role = c("aut", "cre")))
-Description: Package to process FARS data and to pass a course on coursera
+Description: Package has 2 purposes: to process FARS data and to pass a course on coursera. 
 Depends: R (>= 3.3.2)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Author: Rafal Glabski
 Maintainer: Rafal Glabski <rafalglabski@gmail.pl>
-Imports: dplyr, graphics, maps, magrittr, readr, tidyr
+Imports: dplyr, graphics, maps, magrittr, readr, testthat, tidyr
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown

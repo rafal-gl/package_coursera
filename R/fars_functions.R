@@ -1,7 +1,7 @@
 #' Load a FARS data file
 #' 
 #' This function loads a selected csv data file and returns a tibble
-#' with coresponding variables. It is a wrapper for \code{read_csv}.
+#' with coresponding variables.
 #' 
 #' @param filename a character with a name of a file to be loaded
 #' @return a tibble with the same structure as the input file
@@ -14,7 +14,7 @@
 #' # set your wd to a directory with FARS data files
 #' file_path <- system.file("extdata", package = "fars.pack")
 #' setwd(file_path)
-#' fl <- dir()[1]
+#' fl <- dir()[3]
 #' fars2015 <- fars_read(fl)
 #' str(fars2015)
 
@@ -41,8 +41,6 @@ fars_read <- function(filename) {
 #' # acceptable input
 #' make_filename(2015)
 #' make_filename("2015")
-#' # wrong input
-#' make_filename("two thousand fifteen")
 
 make_filename <- function(year) {
   year <- as.integer(year)
@@ -63,11 +61,8 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate select
 #' @export
 #' @examples 
-#' # good years, but bad path
-#' fars_from_2013_to_2015 <- fars_read_years(2013:2015)
-#' fars_from_2013_to_2015
-#' # the directory with data files must be a working directory
-#' setwd("data")
+#' file_path <- system.file("extdata", package = "fars.pack")
+#' setwd(file_path)
 #' fars_from_2013_to_2015 <- fars_read_years(2013:2015)
 #' str(fars_from_2013_to_2015)
 #' # invalid range results in NULLs
@@ -102,12 +97,10 @@ fars_read_years <- function(years) {
 #' @importFrom tidyr spread
 #' @export
 #' @examples 
+#' file_path <- system.file("extdata", package = "fars.pack")
+#' setwd(file_path)
 #' # full years range is covered in data
 #' fars_summarize_years(2013:2015)
-#' # no year is covered
-#' fars_summarize_years(2011:2012)
-#' # invalid years are removed
-#' fars_summarize_years(2011:2014)
 
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -133,10 +126,10 @@ fars_summarize_years <- function(years) {
 #' @importFrom maps map
 #' @export
 #' @examples 
+#' file_path <- system.file("extdata", package = "fars.pack")
+#' setwd(file_path)
 #' fars_map_state(1, 2013)
 #' fars_map_state(30, 2015)
-#' # invalid state.num
-#' fars_map_state(100, 2015)
 
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

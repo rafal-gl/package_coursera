@@ -25,11 +25,11 @@ file_path <- system.file("extdata", package = "fars.pack")
 dir(file_path)
 ```
 
-There is one data file attached with this package. It consists of data from 2015. Let's read this file with `fars_read` function.
+There are 3 data files attached with this package. They consists of data from 2013 to 2015. Let's read this file with `fars_read` function.
 
 ```{r read}
 setwd(file_path)
-fars2015 <- fars_read(dir()[1])
+fars2015 <- fars_read(dir()[3])
 head(fars2015)
 ```
 
