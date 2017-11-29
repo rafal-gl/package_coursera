@@ -4,7 +4,7 @@
 #####################################################################
 # .libPaths("C:/Users/Rafał/Documents/R/win-library/3.3")
 library(devtools)
-library(roxygen2)
+library(roxygen2) 
 library(stringr)
 library(dplyr)
 
